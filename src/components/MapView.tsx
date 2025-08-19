@@ -1109,6 +1109,9 @@ export default function MapView() {
           {selectedAreaKm2 && (
             <div className={styles.box}>Total size: {selectedAreaKm2}</div>
           )}
+          {DrawnRadiusKm && drawCircleEnabled && (
+            <div className={styles.box}>Radius size: {DrawnRadiusKm} km²</div>
+          )}
         </div>
         {turkeyVisible && (
           <div className={styles.buttonfield}>
