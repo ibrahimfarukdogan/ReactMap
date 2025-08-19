@@ -1,0 +1,368 @@
+.base {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.topfield {
+  position: fixed;
+  z-index: 100;
+  right: 10px;
+  top: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  justify-content: space-between;
+  width: calc(100vw - 50px);
+  pointer-events: none;
+}
+
+.boxfield,
+.buttonfield {
+  pointer-events: auto;
+  /* allow buttons inside to still be clickable */
+}
+
+.boxfield {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  gap: 5px;
+}
+
+.boxbuttonfield {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.box {
+  padding: 6px;
+  border-radius: 8px;
+  font-size: 18px;
+  display: flex;
+  background-color: white;
+  min-width: 100px;
+  color: black;
+}
+
+.buttonfield {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  max-height: 54px;
+}
+
+.heatmapbuttonfield {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.regionbutton {
+  border-radius: 30px;
+  width: 120px;
+  height: 54px;
+  color: white;
+  background-color: #2b2b2b;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.regionbutton:hover {
+  background-color: #5a5a5a;
+}
+
+.regionbuttondeactivate {
+  border-radius: 30px;
+  width: 120px;
+  height: 54px;
+  color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s ease;
+  background-color: #7a4146;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.regionbuttondeactivate:hover {
+  background-color: #85585d;
+}
+
+.showpointbutton {
+  border-radius: 30px;
+  width: 120px;
+  height: 54px;
+  color: #2b2b2b;
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.showpointbutton:hover {
+  background-color: #c2afaf;
+}
+
+.showpointbuttondeactivate {
+  border-radius: 30px;
+  width: 120px;
+  height: 54px;
+  color: #2b2b2b;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s ease;
+  background-color: #ad8c8f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.showpointbuttondeactivate:hover {
+  background-color: #c2afaf;
+}
+
+.drawbutton {
+  padding: 8px 15px;
+  font-size: 14px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s ease;
+}
+
+.drawbutton:hover {
+  background-color: #0056b3;
+}
+
+.drawbuttondeactivate {
+  padding: 8px 15px;
+  font-size: 14px;
+  border: none;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s ease;
+  background-color: #3d0d12;
+}
+
+.drawbuttondeactivate:hover {
+  background-color: #ffaab3;
+}
+
+.dragbutton {
+  padding: 8px 15px;
+  font-size: 14px;
+  border: none;
+  background-color: #c3d3e4;
+  color: #171717;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s ease;
+}
+
+.dragbutton:hover {
+  background-color: #697583;
+}
+
+.dragbuttondeactivate {
+  padding: 8px 15px;
+  font-size: 14px;
+  border: none;
+  color: #171717;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s ease;
+  background-color: #996565;
+}
+
+.dragbuttondeactivate:hover {
+  background-color: #3a4149;
+}
+
+.heatbutton {
+  padding: 8px 10px;
+  font-size: 14px;
+  border: none;
+  background-color: #00e431;
+  color: #171717;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s ease;
+}
+
+.heatbutton:hover {
+  background-color: #0b8626;
+}
+
+.heatbuttondeactivate {
+  padding: 8px 10px;
+  font-size: 14px;
+  border: none;
+  color: #171717;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s ease;
+  background-color: #d4ffdd;
+}
+
+.heatbuttondeactivate:hover {
+  background-color: #73fa90;
+}
+
+.heattempbutton {
+  padding: 8px 10px;
+  font-size: 14px;
+  border: none;
+  background-color: #e40000;
+  color: #171717;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s ease;
+}
+
+.heattempbutton:hover {
+  background-color: #860b0b;
+}
+
+.heattempbuttondeactivate {
+  padding: 8px 10px;
+  font-size: 14px;
+  border: none;
+  color: #171717;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s ease;
+  background-color: #ffd4d4;
+}
+
+.heattempbuttondeactivate:hover {
+  background-color: #fa7373;
+}
+
+.mapContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.popupBox {
+  background: #181A1B;
+  padding: 8px 40px 8px 8px;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  font-size: 13px;
+  z-index: 100;
+  white-space: nowrap;
+  pointer-events: none;
+  color: #C8C3BC;
+  text-align: start;
+}
+
+.pointPopupBox {
+  background: #ffffff;
+  padding: 8px 40px 8px 8px;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  font-size: 13px;
+  position: absolute;
+  z-index: 100;
+  pointer-events: auto;
+  white-space: nowrap;
+  color: #181818;
+  text-align: start;
+}
+
+.pointPopupBox form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pointPopupBox input[type="text"],
+.pointPopupBox input[type="number"] {
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+.pointPopupBox button {
+  padding: 6px 8px;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.pointPopupBox button[type="button"] {
+  background-color: #e53935;
+  /* Delete button - red */
+}
+
+.pointPopupBox button:hover {
+  opacity: 0.9;
+}
+
+.cityBox {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  padding: 4px 8px;
+  font-size: 12px;
+  white-space: nowrap;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  color: black;
+  border: 1px solid #000000;
+}
+
+.hoverBox {
+  background: rgba(58, 58, 58, 0.95);
+  border: 1px solid #666;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  pointer-events: none;
+  color: rgb(212, 212, 212);
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.fullScreenButton {
+  bottom: 10px;
+  left: 10px;
+  background-color: transparent;
+  color: #141414;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.fullScreenButton button {
+  background-color: #adadad;
+  color: #141414;
+  width: 35px;
+  height: 35px;
+  font-size: 22px;
+}
+
+/* Optional: when full screen is active */
+.fullScreenButton.ol-full-screen-true {
+  background-color: #000;
+}
